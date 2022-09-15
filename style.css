@@ -308,17 +308,17 @@
  }
 
  .form__btn {
-    align-self: center;
-    justify-self: center;
+    /* align-self: center;
+    justify-self: center; */
     width: 35%;
      font-family: var(--body-font);
      font-size: 16px;
      font-weight: 400;
-     height: 42px;
+     height: 41.95px;
      background-color: var(--orange-color);
      color: var(--white-color);
      border: none;
-     padding: 10px 26px;
+     padding: 10px 24px;
      border-radius: 0px 4px 4px 0px;
 
  }
