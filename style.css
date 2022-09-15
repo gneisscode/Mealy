@@ -66,10 +66,10 @@
 
  .fade-in-image {
  animation: fadeIn 6s ease;
-/* -webkit-animation: fadeIn 6s;
+-webkit-animation: fadeIn 6s;
 -moz-animation: fadeIn 6s;
 -o-animation: fadeIn 6s;
--ms-animation: fadeIn 6s; */
+-ms-animation: fadeIn 6s;
 }
 
 @keyframes fadeIn {
@@ -83,9 +83,9 @@
     }
 }
 
-/* @-moz-keyframes fadeIn {
+@-moz-keyframes fadeIn {
     0% {
-        opacity: 0.3;
+        opacity: 0.9;
     }
 
     100% {
@@ -95,7 +95,7 @@
 
 @-webkit-keyframes fadeIn {
     0% {
-        opacity: 0.3;
+        opacity: 0.9;
     }
 
     100% {
@@ -105,7 +105,7 @@
 
 @-o-keyframes fadeIn {
     0% {
-        opacity: 0.3;
+        opacity: 0.9;
     }
 
     100% {
@@ -115,13 +115,13 @@
 
 @-ms-keyframes fadeIn {
     0% {
-        opacity: 0.3;
+        opacity: 0.9;
     }
 
     100% {
         opacity: 1;
     }
-} */
+}
  .container{
     color: var(--white-color)
  }
