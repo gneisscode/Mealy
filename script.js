@@ -1,3 +1,15 @@
+function openNav(){
+  let hamburgerMenu = document.getElementById("nav-hamburger-menu");
+  hamburgerMenu.className= "hamburger__menu__active"
+  hamburgerMenu.style.width = "296px";
+}
+
+function closeNav(){
+  let hamburgerMenu = document.getElementById("nav-hamburger-menu");
+  hamburgerMenu.className = "nav__hamburger__menu";
+  hamburgerMenu.style.width = "0";
+
+}
 
 let slideIndex = 0;
 showSlides();
