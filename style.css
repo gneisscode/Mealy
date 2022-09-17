@@ -14,7 +14,7 @@
   --h1-font-size: 40px;
 }
 
-@media screen and (min-width: 968px) {
+@media screen and (min-width: 768px) and (max-width: 1104px) {
   :root {
     --logo-font-size: 40px;
     --medium-font-size: 16px;
@@ -130,7 +130,7 @@
 .hamburger__form__btn {
   display: inline-block;
   transition: 0.3s;
-  border-radius: 8em;
+  border-radius: 1em;
 }
 
 .hamburger__form__section {
@@ -187,9 +187,9 @@
   font-weight: 700;
   border: none;
 }
-.hamburger__menu__btn__text{
-    width: 209px;
-    height: 20px;
+.hamburger__menu__btn__text {
+  width: 209px;
+  height: 20px;
 }
 .hamburger__menu__btn__text p {
   text-align: center;
@@ -358,6 +358,11 @@ main {
   margin-bottom: 1em;
 }
 
+.content__box__image img {
+  width: 120px;
+  height: 120px;
+}
+
 .content__box__1 h2,
 .content__box__2 h2 {
   font-family: var(--body-font);
@@ -509,14 +514,13 @@ main {
   }
 
   .nav__logo h1 {
-    font-size: var(--logo-font-size);
+    font-size: 40px;
   }
 
   .nav__logo img {
-    width: 56px;
-    height: 68px;
+    width: 58.38px;
+    height: 58px;
   }
-
   .nav__form__section {
     display: flex;
     align-items: center;
@@ -543,10 +547,6 @@ main {
     font-weight: var(--medium-font-weight);
   }
 
-  /* .nav__form__section input:focus{
-    border: none;
-  } */
-
   .nav__form__btn {
     width: 88px;
     height: 48px;
@@ -555,8 +555,8 @@ main {
     background-color: transparent;
     color: var(--lighter-green-color);
     font-family: var(--body-font);
-    font-size: var(--medium-font-size);
-    font-weight: var(--h1-font-weight);
+    font-size: 16px;
+    font-weight: 700;
     cursor: pointer;
   }
 
@@ -571,8 +571,8 @@ main {
     height: 48px;
     color: var(--white-color);
     font-family: var(--body-font);
-    font-size: var(--medium-font-size);
-    font-weight: var(--h1-font-weight);
+    font-size: 16px;
+    font-weight: 700;
     background-color: var(--lighter-green-color);
     border: none;
     border-radius: 0.5em;
@@ -583,11 +583,6 @@ main {
     background-color: var(--hover-green-color);
   }
 
-  .mySlides {
-    width: 100%;
-    height: 766px;
-    object-fit: cover;
-  }
   .nav__toggle {
     display: none;
   }
@@ -608,5 +603,94 @@ main {
     justify-content: center;
     align-items: center;
     gap: 2em;
+  }
+
+  .mySlides {
+    width: 100%;
+    height: 766px;
+    object-fit: cover;
+  }
+
+  .centered h1 {
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 90px;
+  }
+
+  .centered {
+    margin-top: 20em;
+    gap: 56px;
+  }
+
+  .centered p {
+    font-size: 28px;
+    font-weight: 600;
+  }
+
+  .centered__btn {
+    width: 240px;
+    height: 80px;
+    font-size: 18px;
+  }
+
+  .content__box__1,
+  .content__box__2 {
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    height: 520px;
+    gap: 20px;
+    padding: 3em;
+  }
+
+  .content__box__1 {
+    align-self: flex-end;
+  }
+
+  .content__box__1 h2,
+  .content__box__2 h2 {
+    font-size: 48px;
+    font-weight: 700;
+  }
+
+  .content__container {
+    padding: 5em;
+    gap: 60px;
+  }
+
+  .content__box__image img {
+    width: 310px;
+    height: 300px;
+  }
+
+
+  .content__box__1__header,
+  .content__box__2__header {
+    text-align: center;
+  }
+
+  .content__box__1__content,
+  .content__box__2__content {
+    display: flex;
+    text-align: left;
+    justify-content: space-between;
+    gap: 47px;
+  }
+
+  .content__box__1__content{
+    flex-direction: row-reverse;
+  }
+
+  .content__box__1__content p,
+  .content__box__2__content p {
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 39px;
+  }
+
+  .content__box__1__content h2,
+  .content__box__2__content h2 {
+    font-size: 48px;
+    font-weight: 700;
   }
 }
