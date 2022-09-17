@@ -476,6 +476,7 @@ main {
   cursor: pointer;
 }
 
+
 .footer__payments__section,
 .footer__socials__section {
   font-family: var(--body-font);
@@ -651,8 +652,8 @@ main {
   .content__box__2 {
     display: flex;
     flex-direction: column;
-    width: 85%;
-    height: 520px;
+    width: 90%;
+    height: 450px;
     gap: 20px;
     padding: 3em;
   }
@@ -680,6 +681,7 @@ main {
   .content__box__1__header,
   .content__box__2__header {
     text-align: center;
+    margin-top: 1.5em;
   }
 
   .content__box__1__content,
