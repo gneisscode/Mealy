@@ -310,6 +310,11 @@
   font-weight: 700;
   font-size: 16px;
   color: var(--white-color);
+  cursor: pointer;
+}
+
+.centered__btn:hover{
+  background-color: var(--hover-green-color);
 }
 
 main {
@@ -468,6 +473,7 @@ main {
   padding-left: 0.5em;
   padding-right: 0.5em;
   border-radius: 0px 4px 4px 0px;
+  cursor: pointer;
 }
 
 .footer__payments__section,
@@ -639,6 +645,7 @@ main {
     height: 80px;
     font-size: 18px;
   }
+
 
   .content__box__1,
   .content__box__2 {
