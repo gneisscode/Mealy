@@ -78,8 +78,6 @@
   left: 0;
   background-color: var(--white-color);
   overflow-x: hidden;
-  /* padding-top: 60px; */
-  /* Place content 60px from the top */
   transition: 0.5s;
 }
 
@@ -132,6 +130,7 @@
 .hamburger__form__btn {
   display: inline-block;
   transition: 0.3s;
+  border-radius: 8em;
 }
 
 .hamburger__form__section {
