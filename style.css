@@ -313,7 +313,7 @@
   cursor: pointer;
 }
 
-.centered__btn:hover{
+.centered__btn:hover {
   background-color: var(--hover-green-color);
 }
 
@@ -475,7 +475,6 @@ main {
   border-radius: 0px 4px 4px 0px;
   cursor: pointer;
 }
-
 
 .footer__payments__section,
 .footer__socials__section {
@@ -647,14 +646,12 @@ main {
     font-size: 18px;
   }
 
-
   .content__box__1,
   .content__box__2 {
     display: flex;
     flex-direction: column;
     width: 90%;
     height: 450px;
-    gap: 20px;
     padding: 3em;
   }
 
@@ -673,6 +670,9 @@ main {
     gap: 60px;
   }
 
+  .content__box__image {
+  }
+
   .content__box__image img {
     width: 310px;
     height: 300px;
@@ -681,7 +681,7 @@ main {
   .content__box__1__header,
   .content__box__2__header {
     text-align: center;
-    margin-top: 1.5em;
+    margin-top: 1em;
   }
 
   .content__box__1__content,
