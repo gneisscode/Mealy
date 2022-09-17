@@ -130,7 +130,7 @@
 .hamburger__form__btn {
   display: inline-block;
   transition: 0.3s;
-  border-radius: 1em;
+  border-radius: 0.5em;
 }
 
 .hamburger__form__section {
