@@ -732,6 +732,18 @@ main {
     margin-left: 4em;
   }
 
+  .footer__form__section{
+    width: 450px;
+  }
+
+  .footer__input{
+    width: 328px;
+  }
+
+  .form__btn{
+    width: 122px;
+  }
+
   .footer__mid__section {
     width: 100%;
     display: flex;
