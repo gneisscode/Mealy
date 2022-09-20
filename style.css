@@ -29,6 +29,9 @@
   padding: 0;
   margin: 0;
 }
+
+
+/* ---------------------------Header Nav Section------------------------------------------- */
 .nav__container {
   display: flex;
   justify-content: space-between;
@@ -64,6 +67,8 @@
 .nav__menu {
   display: none;
 }
+
+/* ---------------------------Hamburger Menu------------------------------------------- */
 
 .nav__hamburger__menu {
   display: none;
@@ -204,6 +209,8 @@
   font-weight: 700;
 }
 
+/* ---------------------------Slideshow Section------------------------------------------- */
+
 .mySlides {
   width: 100%;
   height: 400px;
@@ -317,6 +324,8 @@
   background-color: var(--hover-green-color);
 }
 
+/* ---------------------------Main Section------------------------------------------- */
+
 main {
   width: 100%;
 }
@@ -380,6 +389,8 @@ main {
 .content__box__2 span {
   color: var(--orange-color);
 }
+
+/* ---------------------------Footer Section------------------------------------------- */
 
 .footer__section {
   display: flex;
@@ -501,6 +512,11 @@ main {
   margin-bottom: 2.5em;
 }
 
+
+
+
+/* ---------------------------Desktop view media queries------------------------------------------- */
+
 @media screen and (min-width: 1104px) {
   a {
     text-decoration: none;
@@ -510,6 +526,7 @@ main {
     list-style: none;
   }
 
+    /* ---------------------------Header Nav Section------------------------------------------- */
   .nav__item a {
     font-family: var(--body-font);
     font-size: 20px;
@@ -560,6 +577,7 @@ main {
     font-weight: var(--medium-font-weight);
   }
 
+  
   .nav__form__btn {
     width: 88px;
     height: 48px;
@@ -618,6 +636,8 @@ main {
     gap: 2em;
   }
 
+    /* ---------------------------Slide Show------------------------------------------- */
+
   .mySlides {
     width: 100%;
     height: 766px;
@@ -645,6 +665,9 @@ main {
     height: 80px;
     font-size: 18px;
   }
+
+
+    /* ---------------------------Main Section------------------------------------------- */
 
   .content__box__1,
   .content__box__2 {
@@ -707,6 +730,10 @@ main {
     font-weight: 700;
   }
 
+
+
+    /* ---------------------------Footer Section------------------------------------------- */
+
   .footer__section {
     gap: 44px;
     align-items: flex-start;
@@ -738,6 +765,7 @@ main {
 
   .footer__input{
     width: 328px;
+    outline: none;
   }
 
   .form__btn{
