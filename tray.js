@@ -83,7 +83,7 @@ function loadTrayContent() {
                         </div>
                 
                         <div class="button">
-                            <button><img src="Assets/delete.svg" alt="delete"> remove</button>
+                            <button><img src="Assets/delete.svg" alt="delete"> Remove</button>
                         </div>
                 
                 
@@ -121,7 +121,7 @@ function loadTrayContent() {
                         </div>
                 
                         <div class="button">
-                            <button><img src="Assets/delete.svg" alt="delete"> remove</button>
+                            <button><img src="Assets/delete.svg" alt="delete"> Remove</button>
                         </div>
                 
                 

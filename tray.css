@@ -106,6 +106,7 @@ a {
   background-color: transparent;
   outline: none;
   border: none;
+  color: black;
 }
 
 .button img {
