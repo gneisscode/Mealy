@@ -138,6 +138,11 @@ a {
   font-family: var(--body-font);
   font-weight: 400;
   font-size: 20px;
+  
+}
+
+.tray__item__price p{
+  margin-left: -0.5em;
 }
 
 .note__container {
