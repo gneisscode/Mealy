@@ -5,17 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="tray.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="shortcut icon" href="mealy.svg" type="image/x-icon">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
     <script src="script.js" defer></script>
+    <script src="tray.js" defer></script>
     <title>Mealy</title>
 </head>
 <body>
     <header>
         <div class="nav__container">
             <div class="nav__toggle" id="toggle" onclick="openNav()">
-                <img class="menu__icon" src="charm_menu-hamburger.svg" />
+                <img class="menu__icon" src="Assets/charm_menu-hamburger.svg" />
             </div>
     
     
@@ -23,12 +25,12 @@
     
                 <div class="hamburger__menu__header">
                     <div class="nav__logo" id="nav-logo">
-                        <img src="mealy.svg" alt="Mealy logo">
+                        <img src="Assets/mealy.svg" alt="Mealy logo">
                         <h1>Mealy</h1>
                     </div>
     
                     <div class="hamburger__menu__cancel" onclick="closeNav()">
-                        <img src="cancel.svg" alt="cancel">
+                        <img src="Assets/cancel.svg" alt="cancel">
                     </div>
     
                 </div>
@@ -42,7 +44,7 @@
                     <div class="hamburger__form__section">
                         <form action="" class="hamburger__form">
                             <input type="text" placeholder="Search" class="hamburger__input"><button
-                                class="hamburger__form__btn btn__flex"><img src="search-btn.svg" alt="search"></button>
+                                class="hamburger__form__btn btn__flex"><img src="Assets/search-btn.svg" alt="search"></button>
                     </div>
                 </div>
     
@@ -60,10 +62,10 @@
             </div>
     
     
-            <div class="nav__logo" id="nav-logo">
-                <img src="mealy.svg" alt="Mealy logo">
+            <a href="index.html"><div class="nav__logo" id="nav-logo">
+                <img src="Assets/mealy.svg" alt="Mealy logo">
                 <h1>Mealy</h1>
-            </div>
+            </div></a>
     
             <div class="nav__menu" id="nav-menu">
     
@@ -81,7 +83,7 @@
                     </li>
     
                     <li class="nav__item">
-                        <a href="#" class="nav__link"><img src="tray-icon.svg" alt="tray logo"> Tray</a>
+                        <a href="#" class="nav__link"><img src="Assets/tray-icon.svg" alt="tray logo"> Tray</a>
                     </li>
     
                     <li class="nav__item">
@@ -91,18 +93,191 @@
             </div>
     
             <div class="nav__tray__icon" id="nav-logo-tray">
-                <img src="tray-icon.svg" alt="tray logo">
+                <img src="Assets/tray-icon.svg" alt="tray logo">
             </div>
     
         </div>
     </header>
 
+    <main>
+       <div class="side__bar" id="side-bar">
+        <div>
+            <p>Soups</p>
+        </div>
+
+        <div>
+            <p>Swallow</p>
+        </div>
+
+        <div>
+            <p>Rice & Pasta</p>
+        </div>
+
+        <div>
+            <p>Proteins</p>
+        </div>
+
+        <div>
+            <p>Sides</p>
+        </div>
+
+        <div>
+            <p>Drinks</p>
+        </div>
+
+       </div>
+
+       <div class="tray__section" id="tray-section">
+        
+         <div class="tray__section__header" id="tray-section-header">
+
+        </div>
+        
+        <div class="tray__section__title">
+            <p>TRAY</p>
+        </div>
+
+        <div class="tray__content" id="tray-content">
+            <!-- <div class="tray__items__container" id="tray-items-container">
+                <div class="tray__item__container" id="tray-item-container">
+                    <div class= tray__item__image id="tray-item-image">
+
+                        <img src="Assets/black amala 2.svg" alt="amala">
+
+                        <div class="tray__item__name" id="tray-item-name">
+                            <p>Amala</p>
+                        </div>
+
+                        <div class="button">
+                                <button><img src="Assets/delete.svg" alt="delete"> remove</button>
+                            </div>
+
+                        
+                    </div>
+
+                    <div class="tray__item__details">
+
+                        
+                        <div class="tray__item__price" id="tray-item-price">
+                            <p>500</p>
+                        
+                        </div>
+
+                        <div class="tray__item__count">
+                           <button>-</button>
+  
+                            <p>3</p> 
+                            <button>+</button>
+                            
+                        </div>
+
+
+
+                    </div>
+                </div>
+
+
+                <div class="tray__item__container" id="tray-item-container">
+                    <div class=tray__item__image id="tray-item-image">
+                
+                        <img src="Assets/EWEDU 2.svg" alt="amala">
+                
+                        <div class="tray__item__name" id="tray-item-name">
+                            <p>Ewedu</p>
+                        </div>
+                
+                        <div class="button">
+                            <button><img src="Assets/delete.svg" alt="delete"> remove</button>
+                        </div>
+                
+                
+                    </div>
+                
+                    <div class="tray__item__details">
+                
+                
+                        <div class="tray__item__price" id="tray-item-price">
+                            <p>500</p>
+                
+                        </div>
+                
+                        <div class="tray__item__count">
+                            <button>-</button>
+                
+                            <p>3</p>
+                            <button>+</button>
+                
+                        </div>
+                
+                
+                
+                    </div>
+                </div>
+
+
+                <div class="tray__item__container" id="tray-item-container">
+                    <div class=tray__item__image id="tray-item-image">
+                
+                        <img src="Assets/gbegiri 2.svg" alt="amala">
+                
+                        <div class="tray__item__name" id="tray-item-name">
+                            <p>Gbegiri</p>
+                        </div>
+                
+                        <div class="button">
+                            <button><img src="Assets/delete.svg" alt="delete"> remove</button>
+                        </div>
+                
+                
+                    </div>
+                
+                    <div class="tray__item__details">
+                
+                
+                        <div class="tray__item__price" id="tray-item-price">
+                            <p>500</p>
+                
+                        </div>
+                
+                        <div class="tray__item__count">
+                            <button>-</button>
+                
+                            <p>3</p>
+                            <button>+</button>
+                
+                        </div>
+                
+                
+                
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="note__container" id="note-container">
+                <p>Add a note (optional)</p>
+                <form action="" class="tray__form" id="tray-form">
+                   <input type="text" id="add-notes">
+            </div>
+
+            <div class="tray__summary__container" id="tray-summary-container">
+
+            </div> -->
+            
+        </div>
+
+
+
+       </div>
+
+
+    </main>
 
     <footer class="footer__section" id="footer-section">
     
         <div class="footer__logo__container">
             <div class="footer__logo" id="footer-logo">
-                <img src="mealy.svg" alt="Mealy logo">
+                <img src="Assets/mealy.svg" alt="Mealy logo">
                 <h1>Mealy</h1>
     
             </div>
@@ -129,15 +304,15 @@
     
                 <div class="payments__icons">
                     <div>
-                        <img src="pay-on-delivery.png" alt="pay on delivery">
+                        <img src="Assets/pay-on-delivery.png" alt="pay on delivery">
                     </div>
     
                     <div>
-                        <img src="master-card.png" alt="master card">
+                        <img src="Assets/master-card.png" alt="master card">
                     </div>
     
                     <div>
-                        <img src="visa-card.png" alt="visa card">
+                        <img src="Assets/visa-card.png" alt="visa card">
                     </div>
                 </div>
             </div>
@@ -150,15 +325,15 @@
     
                 <div class="socials__icons">
                     <div>
-                        <img src="Facebook.png" alt="Facebook">
+                        <img src="Assets/Facebook.png" alt="Facebook">
                     </div>
     
                     <div>
-                        <img src="Twitter.png" alt="Twitter">
+                        <img src="Assets/Twitter.png" alt="Twitter">
                     </div>
     
                     <div>
-                        <img src="Instagram.png" alt="Instagram">
+                        <img src="Assets/Instagram.png" alt="Instagram">
                     </div>
                 </div>
             </div>
