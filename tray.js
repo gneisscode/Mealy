@@ -1,69 +1,85 @@
-const trayContent = document.querySelector("#tray-content");
-let itemCount = [1, 1, 1];
-let itemPrice = [500, 500, 500];
+const trayItemsContainer = document.querySelector("#tray-items-container");
+const meals = {
+  Amala: [1, 500, "Assets/black amala 2.svg"],
+  Ewedu: [1, 500, "Assets/EWEDU 2.svg"],
+  Gbegiri: [1, 500, "Assets/gbegiri 2.svg"],
+};
+const mealList = Object.keys(meals);
 
-localStorage.setItem("originalPrices", JSON.stringify(itemPrice));
+localStorage.setItem("originalPrices", JSON.stringify(meals));
 
 window.addEventListener("load", (event) => {
   loadTrayContent();
 });
 
-function increaseCount(countIndex, priceIndex) {
-  itemCount[countIndex] += 1;
+function increaseCount(meal, countIndex, priceIndex) {
+  countIndex += 1;
+  meals[meal][0] = countIndex;
 
-  itemPrice[priceIndex] =
-    itemCount[countIndex] *
-    JSON.parse(localStorage.getItem("originalPrices"))[priceIndex];
+  priceIndex =
+    countIndex * JSON.parse(localStorage.getItem("originalPrices"))[meal][1];
+
+  meals[meal][1] = priceIndex;
 
   loadTrayContent();
 }
 
-function reduceCount(countIndex, priceIndex) {
-  itemCount[countIndex] -= 1;
+function reduceCount(meal, countIndex, priceIndex) {
+  countIndex -= 1;
+  meals[meal][0] = countIndex;
 
-  if (itemCount[countIndex] < 1) {
-    itemCount[countIndex] = 1;
+  if (countIndex < 1) {
+    countIndex = 1;
+    meals[meal][0] = countIndex;
   }
-  itemPrice[priceIndex] =
-    itemCount[countIndex] *
-    JSON.parse(localStorage.getItem("originalPrices"))[priceIndex];
+  priceIndex =
+    countIndex * JSON.parse(localStorage.getItem("originalPrices"))[meal][1];
+
+  meals[meal][1] = priceIndex;
 
   loadTrayContent();
 }
 
 function loadTrayContent() {
-  trayContent.innerHTML = `
+  trayItemsContainer.innerHTML = ""
 
-  <div class="tray__items__container" id="tray-items-container">
-                <div class="tray__item__container" id="tray-item-container">
-                    <div class= tray__item__image id="tray-item-image">
+  for (let i = 0; i < mealList.length; i++) {
+  let trayItem = document.createElement("div");
+    trayItem.classList.add("tray__item__container");
 
-                        <img src="Assets/black amala 2.svg" alt="amala">
+    trayItem.innerHTML = ` <div class= tray__item__image id="tray-item-image">
 
-                        <div class="tray__item__name" id="tray-item-name">
-                            <p>Amala</p>
-                        </div>
+                        <img src="${meals[mealList[i]][2]}">
 
-                        <div class="button">
+                       <div class="tray__item__name" id="tray-item-name">
+                          <p>${mealList[i]}</p>
+                       </div>
+
+                         <div class="button">
                                 <button><img src="Assets/delete.svg" alt="delete"> Remove</button>
-                            </div>
+                           </div>
 
-                        
-                    </div>
+                            </div>
 
                     <div class="tray__item__details">
 
                         
                         <div class="tray__item__price" id="tray-item-price">
-                            <p>₦${itemPrice[0]}</p>
+                            <p>₦${meals[mealList[i]][1]}</p>
                         
                         </div>
 
                         <div class="tray__item__count">
-                           <button id="item-count-reduce" onclick="reduceCount(0,0)">-</button>
+                           <button id="item-count-reduce" onclick="reduceCount('${
+                             mealList[i]
+                           }',${meals[mealList[i]][0]}, ${
+      meals[mealList[i]][1]
+    })">-</button>
   
-                            <p>${itemCount[0]}</p> 
-                            <button onclick="increaseCount(0,0)">+</button>
+                            <p>${meals[mealList[i]][0]}</p> 
+                            <button onclick="increaseCount('${mealList[i]}', ${
+      meals[mealList[i]][0]
+    }, ${meals[mealList[i]][1]})">+</button>
                             
                         </div>
 
@@ -73,93 +89,13 @@ function loadTrayContent() {
                 </div>
 
 
-                <div class="tray__item__container" id="tray-item-container">
-                    <div class=tray__item__image id="tray-item-image">
-                
-                        <img src="Assets/EWEDU 2.svg" alt="amala">
-                
-                        <div class="tray__item__name" id="tray-item-name">
-                            <p>Ewedu</p>
-                        </div>
-                
-                        <div class="button">
-                            <button><img src="Assets/delete.svg" alt="delete"> Remove</button>
-                        </div>
-                
-                
-                    </div>
-                
-                    <div class="tray__item__details">
-                
-                
-                        <div class="tray__item__price" id="tray-item-price">
-                            <p>₦${itemPrice[1]}</p>
-                
-                        </div>
-                
-                        <div class="tray__item__count">
-                            <button onclick="decreaseCount(1,1)">-</button>
-                
-                             <p>${itemCount[1]}</p> 
-                            <button onclick="increaseCount(1,1)">+</button>
-                
-                        </div>
-                
-                
-                
-                    </div>
-                </div>
-
-
-                <div class="tray__item__container" id="tray-item-container">
-                    <div class=tray__item__image id="tray-item-image">
-                
-                        <img src="Assets/gbegiri 2.svg" alt="amala">
-                
-                        <div class="tray__item__name" id="tray-item-name">
-                            <p>Gbegiri</p>
-                        </div>
-                
-                        <div class="button">
-                            <button><img src="Assets/delete.svg" alt="delete"> Remove</button>
-                        </div>
-                
-                
-                    </div>
-                
-                    <div class="tray__item__details">
-                
-                
-                        <div class="tray__item__price" id="tray-item-price">
-                            <p>₦${itemPrice[2]}</p>
-                
-                        </div>
-                
-                        <div class="tray__item__count">
-                            <button onclick="decreaseCount(2,2)">-</button>
-                
-                             <p>${itemCount[2]}</p> 
-                            <button onclick="increaseCount(2,2)">+</button>
-                
-                        </div>
-                
-                
-                
-                    </div>
-                </div>
+        
 
             </div>
-
-            <div class="note__container" id="note-container">
-                <p>Add a note (optional)</p>
-                <form action="" class="tray__form" id="tray-form">
-                   <input type="text" id="add-notes">
-            </div>
-
-            <div class="tray__summary__container" id="tray-summary-container">
-
-            </div>
-    
-    
-    `;
+`;
+  trayItemsContainer.append(trayItem);
 }
+
+}
+
+
