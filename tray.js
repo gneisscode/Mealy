@@ -1,4 +1,7 @@
 const trayItemsContainer = document.querySelector("#tray-items-container");
+const summaryItemsContainer = document.querySelector(
+  "#summary-items-container"
+);
 const meals = {
   Amala: [1, 500, "Assets/black amala 2.svg"],
   Ewedu: [1, 500, "Assets/EWEDU 2.svg"],
@@ -41,10 +44,10 @@ function reduceCount(meal, countIndex, priceIndex) {
 }
 
 function loadTrayContent() {
-  trayItemsContainer.innerHTML = ""
+  trayItemsContainer.innerHTML = "";
 
   for (let i = 0; i < mealList.length; i++) {
-  let trayItem = document.createElement("div");
+    let trayItem = document.createElement("div");
     trayItem.classList.add("tray__item__container");
 
     trayItem.innerHTML = ` <div class= tray__item__image id="tray-item-image">
@@ -93,9 +96,49 @@ function loadTrayContent() {
 
             </div>
 `;
-  trayItemsContainer.append(trayItem);
+    trayItemsContainer.append(trayItem);
+  }
+
+  loadSummary();
 }
 
+function loadSummary() {
+  summaryItemsContainer.innerHTML = "";
+  for (let i = 0; i < mealList.length; i++) {
+    let summaryItem = document.createElement("div");
+    summaryItem.innerHTML = `
+        <div class="tray__summary__item" id="tray-summary-item">
+                    <div><p>${mealList[i]} x${meals[mealList[i]][0]}</p></div>
+                    <div>₦${meals[mealList[i]][1]}</div>
+                </div>
+  `;
+
+    summaryItemsContainer.append(summaryItem);
+  }
+
+  let sum = 0;
+  for (let i = 0; i < mealList.length; i++) {
+    sum += meals[mealList[i]][1];
+  }
+
+  let subTotal = document.createElement("div");
+  subTotal.classList.add("sub__total");
+  subTotal.innerHTML = `
+    <hr class="line">
+    <div class="tray__sub__total" id="tray-sub-total">
+
+   
+        <div>
+            <p>Subtotal</p>
+        </div>
+
+        <div>
+            <p>₦${sum}</p>
+        </div>
+                  
+                </div>
+        <button>Proceed to Checkout</button>
+    `;
+
+  summaryItemsContainer.append(subTotal);
 }
-
-
