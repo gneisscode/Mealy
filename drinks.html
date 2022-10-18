@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link rel="shortcut icon" href="images/mealy.svg" type="image/x-icon" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <script src="js/script.js" defer></script>
+    <title>Mealy</title>
+  </head>
+  <body>
+
+<!-- -------------------------header------------------ -->
+
+<header>
+    <div class="nav__container">
+        <div class="nav__toggle" id="toggle" onclick="openNav()">
+            <img class="menu__icon" src="images/charm_menu-hamburger.svg" />
+        </div>
+
+
+        <div class="nav__hamburger__menu" id="nav-hamburger-menu">
+
+            <div class="hamburger__menu__header">
+                <div class="nav__logo" id="nav-logo">
+                    <img src="images/mealy.svg" alt="Mealy logo">
+                    <h1>Mealy</h1>
+                </div>
+
+                <div class="hamburger__menu__cancel" onclick="closeNav()">
+                    <img src="images/cancel.svg" alt="cancel">
+                </div>
+
+            </div>
+
+            <div class="hamburger__menu__main">
+                <div class="hamburger__menu__help">
+                    <a href="#" class="nav__hamburger__link">Help</a>
+
+                </div>
+
+                <div class="hamburger__form__section">
+                    <form action="" class="hamburger__form">
+                        <input type="text" placeholder="Search" class="hamburger__input"><button
+                            class="hamburger__form__btn btn__flex"><img src="images/search-btn.svg" alt="search"></button>
+                </div>
+            </div>
+
+            <div class="hamburger__menu__btn">
+                <div>
+                    <button class="hamburger__login__btn">Log In</button>
+
+                </div>
+
+                <div class="hamburger__menu__btn__text">
+                    <p>Don't have an account? <span>Register</span></p>
+                </div>
+            </div>
+
+            <!-- Add the sidebar menu options -->
+            <ul class="sidebar-menu">
+                <li class="menu__option-001"><a href="soup.html">Soups</a></li>
+                <li class="menu__option-002"><a href="swallow.html">Swallow</a></li>
+                <li class="menu__option-003"><a href="ricePasta.html">Rice & Pasta</a></li>
+                <li class="menu__option-004"><a href="proteins.html">Proteins</a></li>
+                <li class="menu__option-005"><a href="sides.html">Sides</a></li>
+                <li class="menu__option-006"><a href="drinks.html">Drinks</a></li>
+            </ul>
+            <!-- End of the sidebar menu options -->
+
+        </div>
+
+
+        <div class="nav__logo" id="nav-logo">
+            <a href="/index.html"><img src="images/mealy.svg" alt="Mealy logo"></a>
+            <h1>Mealy</h1>
+        </div>
+
+        <div class="nav__menu" id="nav-menu">
+
+            <ul class="nav__list">
+                <li class="nav__item">
+                    <div class="nav__form__section">
+                        <form action="" class="nav__form">
+                            <input type="text" placeholder="Search" class="nav__input"><button
+                                class="nav__form__btn">Search</button>
+                    </div>
+                </li>
+
+                <li class="nav__item">
+                    <a href="#" class="nav__link">Help</a>
+                </li>
+
+                <li class="nav__item">
+                    <a href="#" class="nav__link"><img src="images/tray-icon.svg" alt="tray logo"> Tray</a>
+                </li>
+
+                <li class="nav__item">
+                    <button class="nav__login__btn">Log In</button>
+                </li>
+            </ul>
+        </div>
+
+        <div class="nav__tray__icon" id="nav-logo-tray">
+            <img src="images/tray-icon.svg" alt="tray logo">
+        </div>
+
+    </div>
+</header>
+
+<!-- ----------------------------- End header------------------------>
+
+
+
+<!----------------------------- Menu page----------------------------->
+
+<section class="menu">
+    <ul class="menu__option menu-drinks">
+        <li class="menu__option-001"><a href="soup.html">Soups</a></li>
+        <li class="menu__option-002 "><a href="swallow.html">Swallow</a></li>
+        <li class="menu__option-003"><a href="ricePasta.html">Rice & Pasta</a></li>
+        <li class="menu__option-004"><a href="proteins.html">Proteins</a></li>
+        <li class="menu__option-005"><a href="sides.html">Sides</a></li>
+        <li class="menu__option-006 active-menu"><a href="drinks.html">Drinks</a></li>
+    </ul>
+
+
+    <div class="menu__list">
+       <div class="menu__list-design"></div>
+      <div class="drinks__list">
+        <h2 class="drinks__list-title">Drinks</h2>
+
+        <div class="drinks__list--all">
+            <div class="drinks__list--001">
+                <img src="images/coke.png" alt="coke-img">
+                <p class="drinks-name">Coca-cola</p>
+                <p class="drinks-price">₦200<span class="info">a bottle</span></p>
+                 <button class="btn__cta">Add to tray</button>
+            </div>
+            <div class="drinks__list--002">
+                <img src="images/fanta.png" alt="fanta-img">
+                <p class="drinks-name">Fanta</p>
+                <p class="drinks-price">₦200<span class="info">a bottle</span></p>
+                 <button class="btn__cta">Add to tray</button>
+            </div>
+            <div class="drinks__list--003">
+                <img src="images/eva.png" alt="eva-img">
+                <p class="drinks-name">Eva water</p>
+                <p class="drinks-price">₦200<span class="info">a bottle</span></p>
+                 <button class="btn__cta">Add to tray</button>
+            </div>
+            <div class="drinks__list--004">
+                <img src="images/sprite.png" alt="sprite-img">
+                <p class="drinks-name">Sprite</p>
+                <p class="drinks-price">₦200<span class="info">a bottle</span></p>
+                 <button class="btn__cta">Add to tray</button>
+            </div>
+            <div class="drinks__list--005">
+                <img src="images/chapman.png" alt="chapman-img">
+                <p class="drinks-name">Chapman</p>
+                <p class="drinks-price">₦1000<span class="info">a bottle</span></p>
+                <button class="btn__cta">Add to tray</button>
+            </div>
+            <div class="drinks__list--006">
+                <img src="images/smoothie.png" alt="smoothie-img">
+                <p class="drinks-name">Smoothie</p>
+                <p class="drinks-price">₦1000<span class="info">a bottle</span></p>
+                <button class="btn__cta">Add to tray</button>
+            </div>
+        </div>
+      </div>
+
+
+     
+
+      
+    </div>
+
+</section>
+
+
+<!------------------------------End of soup------------------------- -->
+
+
+
+<!-- --------------------------Footer---------------------------- -->
+
+
+<footer class="footer__section" id="footer-section">
+
+    <div class="footer__logo__container">
+        <div class="footer__logo" id="footer-logo">
+            <img src="images/mealy.svg" alt="Mealy logo">
+            <h1>Mealy</h1>
+
+        </div>
+
+        <div class="footer__logo__text">
+            <p>..Meals made with love</p>
+        </div>
+    </div>
+
+    <div class="footer__mid__section">
+        <div class="footer__form__container">
+            <p>Subscribe to our newsletter</p>
+            <div class="footer__form__section">
+                <form action="" class="footer__form">
+                    <input type="email" placeholder="Enter your email" class="footer__input"><button
+                        class="form__btn">Subscribe</button>
+            </div>
+        </div>
+
+        <div class="footer__payments__section" id="footer-payments-section">
+            <div class="payments__section__text">
+                <p>Supported payment methods</p>
+            </div>
+
+            <div class="payments__icons">
+                <div>
+                    <img src="images/pay-on-delivery.png" alt="pay on delivery">
+                </div>
+
+                <div>
+                    <img src="images/master-card.png" alt="master card">
+                </div>
+
+                <div>
+                    <img src="images/visa-card.png" alt="visa card">
+                </div>
+            </div>
+        </div>
+
+
+        <div class="footer__socials__section" id="footer-socials-section">
+            <div class="socials__section__text">
+                <p>Follow us</p>
+            </div>
+
+            <div class="socials__icons">
+                <div>
+                    <img src="images/Facebook.png" alt="Facebook">
+                </div>
+
+                <div>
+                    <img src="images/Twitter.png" alt="Twitter">
+                </div>
+
+                <div>
+                    <img src="images/Instagram.png" alt="Instagram">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer__bottom__text">
+        <p>&copy; 2022 Mealy Kitchen LTD. All Rights Reserved</p>
+    </div>
+</footer>
+<script src="https://kit.fontawesome.com/44d0e4af8e.js" crossorigin="anonymous"></script>
+  </body>
+</html>
