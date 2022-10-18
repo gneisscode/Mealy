@@ -210,6 +210,9 @@
 }
 
 /* ---------------------------Slideshow Section------------------------------------------- */
+ a {
+   text-decoration: none;
+ }
 
 .mySlides {
   width: 100%;
